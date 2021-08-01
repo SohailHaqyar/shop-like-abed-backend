@@ -8,12 +8,13 @@ import { Deal } from './deals/entities/deal.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'root',
-      password: 'root',
-      database: 'db',
+      // type: 'postgres',
+      // host: 'localhost',
+      // port: 5432,
+      // username: 'root',
+      // password: 'root',
+      // database: 'db',
+      url: process.env.DATABASE_URL,
       entities: [Deal],
       synchronize: true,
       logging: false,
