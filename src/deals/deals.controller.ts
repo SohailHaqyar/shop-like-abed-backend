@@ -1,6 +1,5 @@
 import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { AddDealDto } from './add-deals.dto';
-
 import { DealsService } from './deals.service';
 
 @Controller('deals')
