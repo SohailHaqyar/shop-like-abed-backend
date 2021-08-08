@@ -23,4 +23,7 @@ export class Deal extends CreatableEntity {
 
   @Column()
   discount_details: string;
+  
+  @Column()
+  label: string;
 }
