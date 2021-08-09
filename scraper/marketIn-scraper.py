@@ -43,7 +43,7 @@ get_data(1)
 for offer in final_products:
     data = requests.post(
         'https://shop-like-abed.herokuapp.com/deals', data=offer)
-    print(offer)
+    print(data.json())
 
 
 # random_number = random.randint(1, 200)

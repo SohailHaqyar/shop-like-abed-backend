@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { CreatableEntity } from '../../classes/creatables';
+import { SupermarketSource } from '../add-deals.dto';
 
 @Entity()
 export class Deal extends CreatableEntity {
@@ -26,4 +27,8 @@ export class Deal extends CreatableEntity {
   
   @Column()
   label: string;
+
+
+  @Column()
+  source: SupermarketSource;
 }
