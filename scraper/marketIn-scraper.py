@@ -31,6 +31,7 @@ def get_data(pageNumber):
                 "title": title.strip(),
                 "old_price": old_price.text,
                 "new_price": new_price,
+                "source": 'Marketin',
                 "discount_details": discount_percentage
             })
     final_products.extend(products)

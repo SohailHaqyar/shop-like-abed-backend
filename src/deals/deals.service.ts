@@ -15,6 +15,10 @@ export class DealsService {
     return await this.dealsRepository.findAndCount();
   }
 
+  async getDeal(id: string) {
+    return await this.dealsRepository.findOne(id);
+  }
+
   async addDeal(addDealDto: AddDealDto) {
     const deal = this.dealsRepository.create(addDealDto);
     return await this.dealsRepository.save(deal);
@@ -39,5 +43,11 @@ export class DealsService {
       );
     });
     return result;
+  }
+
+  async updateDeal(id: string, updateDealDto: AddDealDto) {
+    const deal = await this.dealsRepository.findOne(id);
+    Object.assign(deal, updateDealDto);
+    return await this.dealsRepository.save(deal);
   }
 }

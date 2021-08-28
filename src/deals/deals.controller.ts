@@ -1,3 +1,4 @@
+import { Param } from '@nestjs/common';
 import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { AddDealDto } from './add-deals.dto';
 import { DealsService } from './deals.service';
@@ -24,5 +25,11 @@ export class DealsController {
   @Delete('/nuke')
   nuke() {
     return this.dealsService.nuke();
+  }
+
+
+  @Get('/:id')
+  getDeal(@Param('id') id: string) {
+    return this.dealsService.getDeal(id);
   }
 }

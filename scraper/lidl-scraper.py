@@ -35,6 +35,7 @@ def get_data():
                 "new_price": new_price.text.strip(),
                 "discount_details": discount_details.text.strip(),
                 "label": '',
+                "source": 'Lidl',
             })
     final_products.extend(products)
 
